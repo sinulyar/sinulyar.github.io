@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Интерактивный Минималистичный Сайт</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-relaxed text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-semibold">Мой Сайт</h1>
+            <nav class="hidden md:flex space-x-6">
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="hover:text-yellow-500">Главная</a></li>
+                    <li><a href="about.html" class="hover:text-yellow-500">О нас</a></li>
+                    <li><a href="contact.html" class="hover:text-yellow-500">Контакты</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-xl focus:outline-none">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center hidden">
+        <div class="bg-white p-6 rounded-lg">
+            <ul class="space-y-4">
+                <li><a href="index.html" class="text-lg hover:text-yellow-500">Главная</a></li>
+                <li><a href="about.html" class="text-lg hover:text-yellow-500">О нас</a></li>
+                <li><a href="contact.html" class="text-lg hover:text-yellow-500">Контакты</a></li>
+            </ul>
+            <button id="close-menu" class="mt-4 px-4 py-2 bg-gray-900 text-white rounded-full">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-500 to-teal-500 text-white text-center py-20">
+        <h2 class="text-4xl md:text-5xl font-bold">Добро пожаловать на мой сайт</h2>
+        <p class="mt-4 text-lg">Простой, стильный и функциональный дизайн с интерактивными элементами.</p>
+        <a href="about.html" class="mt-6 inline-block px-8 py-3 bg-yellow-500 text-gray-900 rounded-full hover:bg-yellow-600 transition">Узнать больше</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-6">О нас</h2>
+            <p class="text-lg max-w-2xl mx-auto">Мы создаем красивые, удобные и функциональные веб-сайты, ориентированные на пользователей.</p>
+            <a href="about.html" class="mt-6 inline-block px-8 py-3 bg-teal-500 text-white rounded-full hover:bg-teal-600 transition">Подробнее</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-200 py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-6">Контакты</h2>
+            <p class="text-lg">Свяжитесь с нами, чтобы обсудить ваш проект.</p>
+            <a href="contact.html" class="mt-6 inline-block px-8 py-3 bg-teal-500 text-white rounded-full hover:bg-teal-600 transition">Отправить сообщение</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-4">
+        <p>&copy; 2025 Мой Сайт. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+
+</body>
+</html>
